@@ -83,11 +83,11 @@ while dan < 10:
     i = 2
     while i < 10:
         print("{0} * {1} = {2}".format(dan, i, dan * i))
-        i +=1
+        i += 1
     dan += 1
 
 print()
-print("# 2중 while 문을 사용해서 구구단 전체를 출력하세요")
+print("# 2중 while 문을 사용해서 구구단 전체를 출력하세요(선생님 풀이)")
 dan, i = (2, 2)
 while dan < 10:
     print("{0}단".format(dan))
@@ -141,11 +141,11 @@ i = 0
 while i < 6:
     val = random.randint(1, 45)
     lotto.insert(i, val)
-    print(lotto[i])
+    # print(lotto[i])
     i += 1
     # j = 0
-    if val - val ==0:
-        i = 0
+    # if val - val ==0:
+    #     i = 0
     # while j < 5:
     # #     if lotto[i] == lotto[j]:
     # #         i = 0
@@ -156,11 +156,21 @@ print(lotto)
 print()
 print("선생님 풀이")
 lotto=[]#로또번호 받을 빈 리스트
-i = 0#
+i = 0
 while i < 6:
     val = random.randint(1, 45)
     lotto.append(val)
     i += 1
-    if val - val ==0:
-        i = 0
+    # if val - val ==0:
+    #     i = 0
 print(lotto)
+
+print()
+print("수영씨 풀이 - 중복까지 제거")
+lotto=[]
+while len(lotto) < 6:
+    val = random.randint(1, 45)
+    if val not in lotto:
+        lotto.append(val)
+lotto.sort()
+print("당첨 예상 번호 : {0}".format(lotto))
